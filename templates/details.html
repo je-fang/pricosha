@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+</head>
+<body>
+
+
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+Rating: {{ratings.num}}
+
+Tagged on this post:
+
+<table>
+	<th>First Name</th>
+	<th>Last Name</th>
+
+{% for line in posts %}
+	<tr>
+		<td>{{line.fname}}</td>
+		<td>{{line.lname}}</td>
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/logout">Logout</a>
+
+</body>
+
+</html>

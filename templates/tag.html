@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+
+<form action="/tagperson" method="POST">
+	<input type="text" name = "taggee" placeholder="Email to tag" required/> </br>
+	<input type="submit" value = Tag />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+
+<a href="/dashboard">Go back</a>
+
+
+</body>
+
+
+</html>

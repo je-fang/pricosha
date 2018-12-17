@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+
+
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+Here are the posts you are tagged in: 
+
+<table>
+	<th>Time</th>
+	<th>Name</th>
+	<th>From User</th>
+	<th>Item ID</th>
+	<th>File</th>
+	<th>Accept Tag</th>
+
+{% for line in posts %}
+	<tr>
+		<td>{{line.post_time}}</td>
+		<td>{{line.item_name}}</td>
+		<td>{{line.email_post}}</td>
+		<td>{{line.item_id}}</td>
+		<td>{{line.file_path}}</td>
+		<td><a href="/accepttag?itemid={{line.item_id}}">Accept Tag</a></td>
+	</tr>
+{% endfor %}
+</table>
+
+
+</body>
+
+
+</html>

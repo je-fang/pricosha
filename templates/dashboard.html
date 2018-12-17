@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body>
+
+
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+Here are your posts:
+
+<table>
+	<th>Time</th>
+	<th>Name</th>
+	<th>From User</th>
+	<th>Item ID</th>
+	<th>File</th>
+	<th>View Details</th>
+	<th>Tag Someone</th>
+
+{% for line in posts %}
+	<tr>
+		<td>{{line.post_time}}</td>
+		<td>{{line.item_name}}</td>
+		<td>{{line.email_post}}</td>
+		<td>{{line.item_id}}</td>
+		<td>{{line.file_path}}</td>
+		<td><a href="/details?itemid={{line.item_id}}">View Details</a></td>
+		<td><a href="/tag?itemid={{line.item_id}}">Tag Somebody</a></td>
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/home">Go back</a>
+
+
+</body>
+
+
+</html>
